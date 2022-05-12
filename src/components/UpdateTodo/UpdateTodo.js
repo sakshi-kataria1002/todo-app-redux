@@ -41,8 +41,6 @@ const UpdateTodo = () => {
         })
     }
 
-    
-
     return (
         <>
             <Container>
@@ -68,7 +66,7 @@ const UpdateTodo = () => {
                     </TextField>
                     <Button onClick={handleUpdate} > <SaveIcon /></Button>
                 </Box>
-                <Button onClick={handleOpen}>Notification</Button>
+                <Button onClick={handleOpen}>Save Todo</Button>
                 <Modal
                     open={open}
                     onClose={handleClose}
@@ -80,7 +78,7 @@ const UpdateTodo = () => {
                             UPDATED TODO
                         </Typography>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            TODO UPDATED SUCESSFULLY !!!!!!!!!!
+                            Todo Updated Successfully!!
                         </Typography>
                     </Box>
                 </Modal>

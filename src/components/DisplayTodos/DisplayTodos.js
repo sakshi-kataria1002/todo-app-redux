@@ -14,7 +14,7 @@ const DisplayTodo = ({showTodo,getTodoList}) => {
     })
     return(
         <>
-            <Grid container>
+            <Grid container direction="row" justifyContent="center" alignItems="center">
                 <List sx={{width:'100%', maxWidth:360, bgcolor:'background.paper'}}>
                     {
                         getTodoList.map( 

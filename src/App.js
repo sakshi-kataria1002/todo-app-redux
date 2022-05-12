@@ -1,29 +1,17 @@
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box"
-import Grid from "@mui/material/Grid"
-import AddTodo from './components/AddTodo/AddTodo'
-import DisplayTodo from "./components/DisplayTodos/DisplayTodos";
+import React from 'react'
+import {Routes,Route} from 'react-router-dom'
+import UpdateTodo from './components/UpdateTodo/UpdateTodo'
+import HomePage from './pages/HomePage.component'
 
-function App() {
+const App = () => {
   return (
     <>
-      <Container fixed>
-          <Box sx={{ bgcolor:'#cfe8fc', height:'100vh' }} >
-            <h1 style={{textAlign:'center'}}>TODO APP</h1>
-            <Grid container>{/** ROW */}
-              <Grid lg={6}> {/** COLUMN 6 */}
-                <h2 style={{textAlign:'center'}}>ADD TODO</h2>
-                <AddTodo />
-              </Grid>
-              <Grid lg={6}> {/** COLUMN 6 */}
-                <h2 style={{textAlign:'center'}}>DISPLAY TODO</h2>
-                <DisplayTodo />
-              </Grid>
-            </Grid>
-          </Box>
-      </Container>
+        <Routes>
+          <Route path='/' element={<HomePage/>}/>
+          <Route path='update/:id' element={<UpdateTodo />}/>
+        </Routes>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

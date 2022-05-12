@@ -19,7 +19,7 @@ const DisplayTodo = ({showTodo,getTodoList}) => {
                     {
                         getTodoList.map( 
                             todo => <TodoItem 
-                                        key={todo.id}
+                                        key={todo._id}
                                         todo={todo} 
                                     />
                         )
